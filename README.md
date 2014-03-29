@@ -25,7 +25,8 @@ TWITTER_API_SECRET: "twittersecrethere"
 ## Contributing
 
 Contributions are welcome! This is a weekend project and there's plenty more
-that can be done with it. Just fork it and make a pull request.
+that can be done with it (like a logout link). Just fork it and make a pull
+request.
 
 ## License
 
