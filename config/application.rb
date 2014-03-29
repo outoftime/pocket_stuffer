@@ -19,7 +19,8 @@ module PocketStuffer
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    YAML.load_file(Rails.root.join('config', 'defaults', "#{Rails.env}.yml")).
-      each_pair { |k, v| ENV[k.upcase] ||= v }
+    defaults_path = Rails.root.join('config', 'defaults', "#{Rails.env}.yml")
+    YAML.load_file(defaults_path).
+      each_pair { |k, v| ENV[k.upcase] ||= v } if File.exist?(defaults_path)
   end
 end
