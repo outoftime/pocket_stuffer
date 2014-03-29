@@ -9,4 +9,9 @@ class SourcesController < ApplicationController
     source = current_user.sources.heuristic_create!(params[:source][:locator])
     redirect_to sources_path
   end
+
+  def destroy
+    current_user.sources.find(params[:id]).destroy
+    redirect_to sources_path
+  end
 end

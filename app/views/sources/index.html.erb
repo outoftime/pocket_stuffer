@@ -1,6 +1,13 @@
 <%= render 'new' %>
-<ul>
-  <% @sources.each do |source| -%>
-    <li><%= link_to source, source.web_url, target: '_blank' %></li>
-  <% end %>
-</ul>
+
+<% if @sources.present? %>
+  <h2>Your sources</h2>
+  <ul class="sources">
+    <% @sources.each do |source| -%>
+      <li class="<%= source.class.name.sub(/Source$/, '').underscore.dasherize %>">
+        <%= link_to source, source.web_url, target: '_blank' %>
+        <%= link_to 'remove', source_url(source), method: :delete, class: 'remove-source' %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

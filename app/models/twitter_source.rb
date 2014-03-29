@@ -1,6 +1,6 @@
 class TwitterSource < Source
   def self.create_from_locator(locator, options = {})
-    create!(
+    find_or_create_by_locator!(
       locator: locator.sub(/^@/, ''),
       title: locator.sub(/^@?/, '@'),
       type: name

@@ -1,0 +1,40 @@
+body.Sources#Index {
+    label {
+        margin-right: 0.5em;
+    }
+
+    input[type="text"] {
+        width: 20em;
+    }
+
+    .sources {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            padding-left: 26px;
+            margin: 1em 0;
+        }
+
+        .rss {
+            background: url(image_path('feed-icon.png')) center left no-repeat;
+        }
+
+        .twitter {
+            background: url(image_path('twitter-icon.png')) center left no-repeat;
+        }
+
+        .remove-source {
+            font-size: 0.7em;
+            color: red;
+            padding-left: 1em;
+            font-weight: bold;
+            vertical-align: middle;
+            display: none;
+        }
+
+        li:hover .remove-source {
+            display: inline;
+        }
+    }
+}
