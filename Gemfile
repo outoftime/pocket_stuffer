@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 gem 'addressable', '~> 2.3', require: 'addressable/uri'
 gem 'feedjira', '~> 1.1'
 gem 'httparty', '~> 0.13'
@@ -18,4 +20,8 @@ gem 'uglifier', '~> 2.5'
 group :development do
   gem 'byebug', '~> 2.7'
   gem 'pry', '~> 0.9'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
