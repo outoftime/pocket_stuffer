@@ -1,0 +1,6 @@
+<% if current_user.try(:needs_twitter_auth?) %>
+  <div class="notice">
+    In order to update your reading list from Twitter, you need to
+    <%= link_to 'link your Twitter account', '/auth/twitter' %>
+  </div>
+<% end %>

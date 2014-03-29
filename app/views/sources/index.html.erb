@@ -1,0 +1,6 @@
+<%= render 'new' %>
+<ul>
+  <% @sources.each do |source| -%>
+    <li><%= link_to source, source.web_url, target: '_blank' %></li>
+  <% end %>
+</ul>

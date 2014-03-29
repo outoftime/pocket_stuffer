@@ -1,0 +1,5 @@
+<%= form_for Source.new do |f| %>
+  <%= f.label :locator, 'Enter a blog URL or Twitter username:' %>
+  <%= f.text_field :locator %>
+  <%= f.submit %>
+<% end %>
